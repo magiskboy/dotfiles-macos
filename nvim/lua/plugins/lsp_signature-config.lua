@@ -11,7 +11,7 @@ require'lsp_signature'.setup({
   max_height = 30, 
   max_width = 120, 
   handler_opts = {
-    border = "single"   
+    border = "rounded"   
   },
   always_trigger = true, 
 })
