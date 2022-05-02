@@ -1,5 +1,5 @@
 window:
-  startup_mode: Windowed
+  startup_mode: Fullscreen
   dynamic_padding: true
 
 font:
@@ -19,7 +19,7 @@ font:
     family: MesloLGS NF
     style: Bold Italic
 
-  size: 13
+  size: 14
 
 key_bindings:
   - { key: Space, mods: Control, action: ToggleFullscreen }
@@ -27,9 +27,7 @@ key_bindings:
 colors:
   # Default colors
   primary:
-    # hard contrast: background = '0x1d2021'
     background: "0x282828"
-    # soft contrast: background = '0x32302f'
     foreground: "0xebdbb2"
 
   # Normal colors

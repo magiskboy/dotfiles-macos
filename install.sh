@@ -1,3 +1,3 @@
 #!/bin/bash
 
-brew install zoxide neovim zsh starship exa
+brew install zoxide neovim zsh starship exa tmux

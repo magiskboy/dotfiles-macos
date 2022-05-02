@@ -31,7 +31,7 @@ require'nvim-tree'.setup {
     mappings = {
       custom_only = false,
       list = {
-        { key = {"l", "<2-LeftMouse>"}, cb = tree_cb("edit") },
+        { key = {"l", "<2-LeftMouse>"},      cb = tree_cb("edit") },
         { key = "h",                         cb = tree_cb("close_node") },
         { key = "dd",                        cb = tree_cb("cut") },
         { key = "yy",                        cb = tree_cb("copy") },

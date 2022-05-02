@@ -13,6 +13,7 @@ vim.o.autoindent = true
 vim.o.cursorline = true
 vim.o.ignorecase = false
 vim.o.lazyredraw = true
+vim.o.updatetime = 250
 vim.o.mouse = "a"
 vim.o.number = true
 vim.o.numberwidth = 5
@@ -53,12 +54,22 @@ command! JsonMinify %!jq -c .
 command! GoRun !go run %
 ]])
 
+vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
+    callback = function(args)
+        vim.diagnostic.open_float(nil, {focus=false})
+    end
+})
+
+vim.api.nvim_create_user_command("Py", function (args)
+    python()
+end, {})
+vim.api.nvim_create_user_command("Js", function (args)
+    node()
+end, {})
+vim.api.nvim_create_user_command("Htop", function (args)
+    htop()
+end, {})
+
 vim.diagnostic.config({
   virtual_text = false
 })
-
--- Show line diagnostics automatically in hover window
-vim.o.updatetime = 250
-vim.cmd([[
-    autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})
-]])

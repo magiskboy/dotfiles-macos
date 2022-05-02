@@ -23,9 +23,7 @@ colorscheme elflord
 let mapleader = ","
 
 nmap J 5j
-nmap H 5h
 nmap K 5k
-nmap L 5l
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
