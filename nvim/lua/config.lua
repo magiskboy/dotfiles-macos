@@ -1,7 +1,7 @@
 vim.cmd([[
 filetype plugin indent on
 set t_Co=256
-colorscheme gruvbox-material
+colorscheme vscode
 syntax on
 syntime on
 ]])
@@ -39,6 +39,9 @@ vim.g.indentLine_color_term = 239
 vim.g.AutoPairsShortcutToggle = ""
 vim.g.floaterm_autoclose = 2
 
+vim.g.vscode_style = "dark"
+vim.o.background = 'dark'
+
 vim.cmd([[
 hi RedSign guibg=NONE
 hi AquaSign guibg=NONE
@@ -46,26 +49,30 @@ hi YellowSign guibg=NONE
 hi BlueSign guibg=NONE
 hi LineNr cterm=NONE ctermbg=NONE ctermfg=NONE gui=NONE guibg=NONE guifg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
-
-let g:test#javascript#runner = 'jest'
-
-command! JsonBeauty %!jq .
-command! JsonMinify %!jq -c .
-command! GoRun !go run %
 ]])
 
-vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
-    callback = function(args)
-        vim.diagnostic.open_float(nil, {focus=false})
-    end
-})
+-- vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
+--     callback = function(args)
+--         vim.diagnostic.open_float(nil, {focus=false})
+--     end
+-- })
 
-vim.api.nvim_create_user_command("Py", function (args)
+-- vim.api.nvim_create_user_command("JsonBeauty", {
+--     command = "%!jq ."
+-- }, {})
+
+-- vim.api.nvim_create_user_command("JsonMinify", {
+--     command = "%!jq -c ."
+-- }, {})
+
+vim.api.nvim_create_user_command("Python", function (args)
     python()
 end, {})
-vim.api.nvim_create_user_command("Js", function (args)
+
+vim.api.nvim_create_user_command("Node", function (args)
     node()
 end, {})
+
 vim.api.nvim_create_user_command("Htop", function (args)
     htop()
 end, {})
