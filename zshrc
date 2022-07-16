@@ -1,4 +1,4 @@
-export ZSH="$HOME/dotfiles/ohmyzsh"
+export ZSH="$HOME/.ohmyzsh"
 
 ZSH_THEME="robbyrussell"
 
@@ -9,6 +9,7 @@ plugins=(
     z
     gcloud
     kubectl
+    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -16,8 +17,10 @@ source $ZSH/oh-my-zsh.sh
 export BAT_THEME="Theme: Visual Studio Dark+"
 export GOPATH=/Users/nkthanh/Development/go
 export PATH=/Users/nkthanh/.local/go/bin:$GOPATH/bin:$PATH
+export EDITOR=nvim
 
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
+alias ls="exa"
 alias lt="exa --tree"
 
 export NVM_DIR="$HOME/.nvm"
