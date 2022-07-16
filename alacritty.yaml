@@ -5,7 +5,9 @@ window:
   startup_mode: Windowed
   dynamic_padding: true
 
-background_opacity: 0.9
+background_opacity: 1
+
+cursor_style: Underline
 
 font:
   normal:
@@ -30,34 +32,6 @@ key_bindings:
   - { key: Space, mods: Control, action: ToggleFullscreen }
 
 colors:
-  # primary:
-  #   background: "0x1e2030"
-  #   foreground: "0xd9d9d9"
-
-  # cursor:
-  #   text: "0xf0f0f0"
-  #   cursor: "0x606060"
-
-  # normal:
-  #   black: "0x444a73"
-  #   red: "0xff5370"
-  #   green: "0x4fd6be"
-  #   yellow: "0xffc777"
-  #   blue: "0x3e68d7"
-  #   magenta: "0xfc7b7b"
-  #   cyan: "0x86e1fc"
-  #   white: "0xd0d0d0"
-
-  # bright:
-  #   black: "0x828bb8"
-  #   red: "0xff98a4"
-  #   green: "0xc3e88d"
-  #   yellow: "0xffc777"
-  #   blue: "0x82aaff"
-  #   magenta: "0xff966c"
-  #   cyan: "0xb4f9f8"
-  #   white: "0x5f8787"
-
   primary:
     background: "#1e1e1e"
     foreground: "#d4d4d4"

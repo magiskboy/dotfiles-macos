@@ -28,13 +28,16 @@ cmp.setup({
         feedkey("<Plug>(vsnip-jump-prev)", "")
       end
     end, { "i", "s" }),
+
+    ['<C-e>'] = cmp.mapping.complete(),
+
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
   },
   sources = cmp.config.sources({
     { name = 'path'},
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
-  })
+  },{ name = 'buffer' })
 });
 
 cmp.setup.cmdline(':', {
@@ -42,3 +45,18 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     }
 });
+
+cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+cmp.setup.filetype('gitcommit', {
+  sources = cmp.config.sources({
+    { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+  }, {
+    { name = 'buffer' },
+  })
+})

@@ -1,7 +1,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-    use 'xiyaowong/nvim-transparent'
+    use 'lewis6991/impatient.nvim'
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig'
     use 'alvan/vim-closetag'
@@ -19,10 +19,8 @@ return require('packer').startup(function()
     use 'romgrk/barbar.nvim'
     use 'kdheepak/tabline.nvim'
     use 'ray-x/lsp_signature.nvim'
-    use 'jose-elias-alvarez/null-ls.nvim'
     use 'akinsho/toggleterm.nvim'
     use "lukas-reineke/indent-blankline.nvim"
-    use 'stevearc/dressing.nvim'
     use 'Mofiqul/vscode.nvim'
     use {
         'nvim-telescope/telescope.nvim',
@@ -31,9 +29,6 @@ return require('packer').startup(function()
         },
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-
-    use 'vim-test/vim-test'
-
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-path'

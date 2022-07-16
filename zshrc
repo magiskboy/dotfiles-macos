@@ -13,6 +13,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+export BAT_THEME="Theme: Visual Studio Dark+"
+export GOPATH=/Users/nkthanh/Development/go
+export PATH=/Users/nkthanh/.local/go/bin:$GOPATH/bin:$PATH
+
 alias zshconfig="vim ~/.zshrc"
 alias lt="exa --tree"
 
@@ -23,5 +27,3 @@ export NVM_DIR="$HOME/.nvm"
 # fpath+=$HOME/.zsh/pure
 
 eval "$(starship init zsh)"
-
-export BAT_THEME="Theme: Visual Studio Dark+"

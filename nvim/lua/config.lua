@@ -51,20 +51,6 @@ hi LineNr cterm=NONE ctermbg=NONE ctermfg=NONE gui=NONE guibg=NONE guifg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 ]])
 
--- vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
---     callback = function(args)
---         vim.diagnostic.open_float(nil, {focus=false})
---     end
--- })
-
--- vim.api.nvim_create_user_command("JsonBeauty", {
---     command = "%!jq ."
--- }, {})
-
--- vim.api.nvim_create_user_command("JsonMinify", {
---     command = "%!jq -c ."
--- }, {})
-
 vim.api.nvim_create_user_command("Python", function (args)
     python()
 end, {})
