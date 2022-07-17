@@ -4,6 +4,7 @@ return require('packer').startup(function()
     use 'lewis6991/impatient.nvim'
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig'
+    use 'kabouzeid/nvim-lspinstall'
     use 'alvan/vim-closetag'
     use 'tpope/vim-eunuch'
     use 'wakatime/vim-wakatime'
@@ -29,6 +30,7 @@ return require('packer').startup(function()
         },
     }
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'onsails/lspkind.nvim'
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-path'

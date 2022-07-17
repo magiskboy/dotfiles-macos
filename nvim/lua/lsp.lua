@@ -26,6 +26,9 @@ lsp.gopls.setup{
 
 lsp.clangd.setup{}
 
+lsp.cssmodules_ls.setup{}
+lsp.cssls.setup{}
+
 -- setup formatter
 lsp.diagnosticls.setup {
   on_attach = on_attach,
@@ -65,12 +68,12 @@ lsp.diagnosticls.setup {
         args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
         rootPatterns = { '.git' },
       },
-      prettier = {
-        command = 'prettier_d_slim',
-        rootPatterns = { '.git' },
-        -- requiredFiles: { 'prettier.config.js' },
-        args = { '--stdin', '--stdin-filepath', '%filename' }
-      }
+      -- prettier = {
+      --   command = 'prettier_d_slim',
+      --   rootPatterns = { '.git' },
+      --   -- requiredFiles: { 'prettier.config.js' },
+      --   args = { '--stdin', '--stdin-filepath', '%filename' }
+      -- }
     },
     formatFiletypes = {
       css = 'prettier',

@@ -1,13 +1,9 @@
-env:
-  TERM: xterm-256color
-
 window:
   startup_mode: Windowed
   dynamic_padding: true
-
-background_opacity: 1
-
-cursor_style: Underline
+  padding:
+    x: 0
+    y: 0
 
 font:
   normal:
@@ -26,10 +22,7 @@ font:
     family: MesloLGS NF
     style: Bold Italic
 
-  size: 14
-
-key_bindings:
-  - { key: Space, mods: Control, action: ToggleFullscreen }
+  size: 16
 
 colors:
   primary:
