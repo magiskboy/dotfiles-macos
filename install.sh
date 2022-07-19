@@ -28,5 +28,7 @@ ln -sf `pwd`/starship.toml $HOME/.config/starship.toml
 ln -sf `pwd`/tmux.conf $HOME/.tmux.conf
 ln -sf `pwd`/vimrc $HOME/.vimrc
 ln -sf `pwd`/zshrc $HOME/.zshrc
+ln -sf `pwd`/zprofile $HOME/.zprofile
+ln -sf `pwd`/zlogin $HOME/.zlogin
 
 sudo chsh -s $(which zsh)
