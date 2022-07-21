@@ -64,6 +64,6 @@ vim.api.nvim_create_user_command("Htop", function (args)
     htop()
 end, {})
 
--- vim.diagnostic.config({
---   virtual_text = true
--- })
+vim.diagnostic.config({
+  virtual_text = true
+})

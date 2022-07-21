@@ -1,6 +1,23 @@
 local util = require'lspconfig'.util
 local lsp = require('lspconfig');
 
+local border = {
+      {"🭽", "FloatBorder"},
+      {"▔", "FloatBorder"},
+      {"🭾", "FloatBorder"},
+      {"▕", "FloatBorder"},
+      {"🭿", "FloatBorder"},
+      {"▁", "FloatBorder"},
+      {"🭼", "FloatBorder"},
+      {"▏", "FloatBorder"},
+}
+
+-- LSP settings (for overriding per client)
+local handlers =  {
+  ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border}),
+  ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
+}
+
 local on_attach = function (client)
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_command [[augroup Format]]
@@ -12,22 +29,28 @@ end
 
 -- setup language server
 
-lsp.jedi_language_server.setup{}
+lsp.jedi_language_server.setup{
+    handlers = handlers
+}
 
 lsp.tsserver.setup({
     on_attach = function (client)
         client.server_capabilities.document_formatting = true
-    end
+    end,
+    handlers = handlers
 })
 
 lsp.gopls.setup{
     root_dir = util.root_pattern("go.mod", ".git", "*.go"),
+    handlers = handlers
 }
 
-lsp.clangd.setup{}
+lsp.clangd.setup{
+    handlers = handlers
+}
 
-lsp.cssmodules_ls.setup{}
-lsp.cssls.setup{}
+-- lsp.cssmodules_ls.setup{}
+-- lsp.cssls.setup{}
 
 -- setup formatter
 lsp.diagnosticls.setup {

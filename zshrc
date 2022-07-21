@@ -20,7 +20,7 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
-export BAT_THEME="Theme: Visual Studio Dark+"
+export BAT_THEME="Visual Studio Dark+"
 export GOPATH=/Users/nkthanh/Development/go
 export PATH=/Users/nkthanh/.local/go/bin:$GOPATH/bin:$PATH
 export EDITOR=nvim
@@ -29,5 +29,5 @@ alias zshconfig="nvim ~/.zshrc"
 alias ls="exa"
 alias lt="exa --tree"
 
-
 eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd)"
