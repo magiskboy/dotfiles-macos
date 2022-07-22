@@ -39,6 +39,7 @@ let NERDTreeMinimalUI=1
 let NERDTreeMinimalMenu=1
 let g:NERDTreeWinPos = "right"
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 nmap J 5j
 nmap K 5k
@@ -61,3 +62,13 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> H :call ShowDocumentation()<CR>
+
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
