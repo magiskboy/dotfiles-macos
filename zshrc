@@ -6,10 +6,9 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 plugins=(
     git
-    z
-    gcloud
     kubectl
     vi-mode
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -23,7 +22,7 @@ compinit -C
 export BAT_THEME="Visual Studio Dark+"
 export GOPATH=/Users/nkthanh/Development/go
 export PATH=/Users/nkthanh/.local/go/bin:$GOPATH/bin:$PATH
-export EDITOR=nvim
+export EDITOR=vim
 
 alias zshconfig="nvim ~/.zshrc"
 alias ls="exa"
