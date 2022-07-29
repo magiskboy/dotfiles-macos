@@ -13,6 +13,7 @@ filetype plugin on
 syntax on
 colorscheme codedark
 
+set backspace=indent,eol,start
 set path+=**
 set wildmenu
 set number

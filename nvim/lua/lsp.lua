@@ -1,15 +1,15 @@
 local util = require'lspconfig'.util
-local lsp = require('lspconfig');
+local lsp = require('lspconfig')
 
 local border = {
-      {"🭽", "FloatBorder"},
-      {"▔", "FloatBorder"},
-      {"🭾", "FloatBorder"},
-      {"▕", "FloatBorder"},
-      {"🭿", "FloatBorder"},
-      {"▁", "FloatBorder"},
-      {"🭼", "FloatBorder"},
-      {"▏", "FloatBorder"},
+    {"┌", "FloatBorder"},
+    {"─", "FloatBorder"},
+    {"┐", "FloatBorder"},
+    {"│", "FloatBorder"},
+    {"┘", "FloatBorder"},
+    {"─", "FloatBorder"},
+    {"└", "FloatBorder"},
+    {"│", "FloatBorder"},
 }
 
 -- LSP settings (for overriding per client)

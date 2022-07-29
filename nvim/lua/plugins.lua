@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'lewis6991/impatient.nvim'
     use 'wbthomason/packer.nvim'
+    use 'simrat39/symbols-outline.nvim'
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
     use 'alvan/vim-closetag'
@@ -24,7 +25,7 @@ return require('packer').startup(function()
     use 'Mofiqul/vscode.nvim'
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { 
+        requires = {
             {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
         },
     }

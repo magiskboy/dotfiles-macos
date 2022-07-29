@@ -1,13 +1,3 @@
-vim.api.nvim_exec(
-    [[
-        function! DisableST()
-          return ""
-        endfunction
-        au BufEnter NvimTree setlocal statusline=%!DisableST()
-    ]],
-    false
-)
-
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 require'nvim-tree'.setup {
   open_on_tab         = true,
