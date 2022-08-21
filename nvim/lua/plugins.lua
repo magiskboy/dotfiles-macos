@@ -18,7 +18,16 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-tree.lua'
     use 'lewis6991/gitsigns.nvim'
     use 'nvim-lualine/lualine.nvim'
-    use 'kdheepak/tabline.nvim'
+    use {
+        'junegunn/fzf.vim',
+        requires = {
+            { 'junegunn/fzf', run = './install --bin', }
+        }
+    }
+    use {
+        'akinsho/bufferline.nvim',
+        tag = "v2.*",
+    }
     use 'ray-x/lsp_signature.nvim'
     use 'akinsho/toggleterm.nvim'
     use "lukas-reineke/indent-blankline.nvim"

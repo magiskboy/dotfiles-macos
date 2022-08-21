@@ -30,3 +30,6 @@ vim.api.nvim_set_keymap('', '<C-s>', '<cmd>write<cr>', {})
 vim.api.nvim_set_keymap('n', '<C-q>', '<cmd>quit<cr>', {})
 
 vim.api.nvim_set_keymap('n', '<C-g>', '<cmd>lua git()<cr>', {})
+
+vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>GFiles<cr>', {})
+vim.api.nvim_set_keymap('n', '<C-f>', '<cmd>Telescope live_grep<cr>', {})
