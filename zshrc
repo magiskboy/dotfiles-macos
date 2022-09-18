@@ -26,5 +26,9 @@ export EDITOR=vim
 alias zshconfig="nvim ~/.zshrc"
 alias ls="exa"
 alias lt="exa --tree"
+alias -s {c,js,ts,jsx,tsx,py,cpp,h,conf,java,lua,css,less,sass}=bat
+alias -s git="git clone"
+
+bindkey -s '^d' 'clear && ls^M'
 
 eval "$(fnm env --use-on-cd)"

@@ -10,12 +10,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 brew install \
     zoxide \
-    neovim \
     zsh \
-    starship \
     exa \
-    tmux \
-    alacritty \
     pyenv \
     htop \
     docker.io \
@@ -23,8 +19,6 @@ brew install \
     k9s
 
 ln -sf `pwd`/gitconfig $HOME/.gitconfig
-ln -sf `pwd`/alacritty.yaml $HOME/.config/alacritty.yaml
-ln -sf `pwd`/starship.toml $HOME/.config/starship.toml
 ln -sf `pwd`/tmux.conf $HOME/.tmux.conf
 ln -sf `pwd`/vimrc $HOME/.vimrc
 ln -sf `pwd`/zshrc $HOME/.zshrc
