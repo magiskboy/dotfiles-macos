@@ -133,7 +133,7 @@
     abbrev = 12
     attributesfile = ~/.gitattributes
     autocrlf = input
-    editor = nvim
+    editor = vim
     excludesfile = ~/.gitignore
     pager = delta
 
@@ -204,7 +204,7 @@
   prompt = true
 
 [mergetool "vimdiff"]
-  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+  cmd = vim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 
 [difftool]
     prompt = false
