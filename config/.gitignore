@@ -1,0 +1,8 @@
+/*
+!/.gitignore
+!/nvim
+!/pgcli
+!/mycli
+!/alacritty.yml
+!/starship.toml
+!/zellij

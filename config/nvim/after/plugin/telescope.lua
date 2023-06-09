@@ -1,6 +1,11 @@
 local actions = require "telescope.actions"
 
 require('telescope').setup {
+  pickers = {
+    find_files = {
+      disable_devicons = true
+    },
+  },
   defaults = {
     vimgrep_arguments = {
       "rg",
@@ -36,5 +41,5 @@ require('telescope').setup {
 require('telescope').load_extension('fzf')
 
 
--- vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', {})
--- vim.api.nvim_set_keymap('n', '<C-f>', '<cmd>Telescope live_grep<cr>', {})
+vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', {})
+vim.api.nvim_set_keymap('n', '<C-f>', '<cmd>Telescope live_grep<cr>', {})

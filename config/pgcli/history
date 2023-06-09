@@ -1,0 +1,48 @@
+
+# 2023-04-06 10:35:47.368765
++use postgres
+
+# 2023-04-06 10:35:51.969776
++\dt;
+
+# 2023-04-06 10:37:27.443139
++use tweet;
+
+# 2023-04-06 10:37:30.263033
++\dt;
+
+# 2023-04-06 10:37:40.865450
++drop table user_tb;
+
+# 2023-04-06 10:38:50.821846
++create table (id serial, email varchar(200) not null, hashed_password varchar(256) not null, fullname varchar(100), scopes varchar(200) not null);
+
+# 2023-04-06 10:39:03.701761
++create table user_tb (id serial, email varchar(200) not null, hashed_password varchar(256) not null, fullname varchar(100), scopes varchar(200) not null);
+
+# 2023-04-06 10:42:47.696796
++alter table user_tb modify column email unique;
+
+# 2023-04-06 10:43:11.619343
++alter table user_tb alter column email unique;
+
+# 2023-04-06 10:44:40.982759
++create unique index email_unique on user_tb(email);
+
+# 2023-04-06 11:53:18.739477
++alter table user_tb add column role varchar(20) not null default "Normal user"
+
+# 2023-04-06 11:53:39.613474
++alter table user_tb add column role varchar(20) not null;
+
+# 2023-04-06 11:53:51.504434
++alter table user_tb add column role varchar(20) not null default "Normal user";
+
+# 2023-04-06 11:56:21.992556
++alter table user_tb add column user_role varchar(20) not null default "Normal user";
+
+# 2023-04-06 11:57:02.073822
++alter table user_tb add column user_role varchar(20) default "Normal user" not null;
+
+# 2023-04-06 11:57:48.268909
++alter table user_tb add column user_role varchar(20);

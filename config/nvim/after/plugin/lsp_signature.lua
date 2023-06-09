@@ -14,5 +14,4 @@ require'lsp_signature'.setup({
     border = "single"   
   },
   always_trigger = true, 
-  transparency = 80
 })

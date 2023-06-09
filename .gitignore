@@ -1,1 +1,12 @@
-nvim/plugin/*
+*.log
+tags
+*.zwc
+*.old
+.DS_Store
+config/nvim/plugin/packer_compiled.lua
+config/pgcli/*
+config/mycli/*
+!config/pgcli/config
+!config/mycli/config
+!config/lazygit/config.yml
+!config/zellij
