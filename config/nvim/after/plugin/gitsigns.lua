@@ -1,7 +1,7 @@
 vim.cmd([[
-hi GitSignsAdd guibg=NONE guifg=#32a852
-hi GitSignsDelete guibg=NONE guifg=#e0364a
-hi GitSignsChange guibg=NONE guifg=#52d9ff
+    hi GitSignsAdd guibg=NONE guifg=#32a852
+    hi GitSignsDelete guibg=NONE guifg=#e0364a
+    hi GitSignsChange guibg=NONE guifg=#52d9ff
 ]])
 
 vim.api.nvim_set_keymap('n', '<C-b>', '<cmd>Gitsigns blame_line<CR>', { silent = true })

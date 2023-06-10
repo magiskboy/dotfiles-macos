@@ -2,6 +2,7 @@ add_newline = false
 
 [python]
 pyenv_version_name = true
+detect_files = ["pyproject.toml", "requirements.txt", "setup.py"]
 
 [character]
 success_symbol = "[➜](bold green)"
@@ -15,13 +16,13 @@ show_milliseconds = true
 truncate_to_repo = false
 truncation_length = 6
 truncation_symbol = "…/"
-style = "bold green"
+style = "green"
 
 [gcloud]
 disabled = true
 
 [kubernetes]
-disabled = false
+disabled = true
 
 [docker_context]
 disabled = true

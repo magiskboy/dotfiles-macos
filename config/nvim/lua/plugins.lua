@@ -17,9 +17,7 @@ return require('packer').startup(function()
     use 'kevinhwang91/rnvimr'
     use 'lewis6991/gitsigns.nvim'
     use 'ray-x/lsp_signature.nvim'
-    use ({
-        'projekt0n/github-nvim-theme'
-    })
+    use 'nvim-treesitter/nvim-treesitter'
     use 'navarasu/onedark.nvim'
     use {
         'nvim-telescope/telescope.nvim',

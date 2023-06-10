@@ -7,6 +7,7 @@ require('telescope').setup {
     },
   },
   defaults = {
+    scroll_speed = 1,
     vimgrep_arguments = {
       "rg",
       "--color=never",
