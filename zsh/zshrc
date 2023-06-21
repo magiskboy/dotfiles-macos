@@ -21,6 +21,7 @@ compinit -C
 
 alias ls="exa"
 alias lt="exa -T"
+alias -s git="git clone"
 
 export GOPATH=/Users/nkthanh/Development/go
 export PATH=/Users/nkthanh/.local/go/bin:$GOPATH/bin:$HOME/.local/bin:$PATH
@@ -36,4 +37,4 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"

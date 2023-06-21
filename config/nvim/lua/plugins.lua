@@ -19,6 +19,7 @@ return require('packer').startup(function()
     use 'ray-x/lsp_signature.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'navarasu/onedark.nvim'
+    use 'nvim-tree/nvim-tree.lua'
     use {
         'nvim-telescope/telescope.nvim',
         requires = { 
