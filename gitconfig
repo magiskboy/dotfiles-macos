@@ -185,6 +185,10 @@
     useConfigOnly = true
 	email = nguyenkhacthanh244@gmail.com
 	name = Nguyen Khac Thanh
+    signingkey = 92E479EE70457711
+
+[commit]
+    gpgsign = true
 
 [include]
 

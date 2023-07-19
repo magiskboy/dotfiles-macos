@@ -40,8 +40,10 @@ lsp.pylsp.setup{
 }
 
 lsp.tsserver.setup({
-    root_dir = util.root_pattern("*.js", "*.ts", "*.tsx", "*.jsx"),
+    root_dir = util.root_pattern("package.json"),
     handlers = handlers
 })
 
 lsp.yamlls.setup{}
+
+lsp.html.setup{}

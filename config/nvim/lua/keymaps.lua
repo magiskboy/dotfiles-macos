@@ -34,7 +34,7 @@ vim.api.nvim_set_keymap('n', '<C-a>', 'ggVG', {})
 vim.api.nvim_set_keymap('', '<C-s>', '<cmd>write<cr>', {})
 vim.api.nvim_set_keymap('n', '<C-q>', '<cmd>quit<cr>', {})
 
-vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>RnvimrToggle<cr>', {})
+-- vim.api.nvim_set_keymap('n', '<C-e>', '<cmd>RnvimrToggle<cr>', {})
 
 vim.api.nvim_set_keymap('n', '<leader>x', '<cmd>bdelete<cr>', opts)
 vim.api.nvim_set_keymap('n', '<leader>1', '<cmd>BufferLineGoToBuffer 1<cr>', opts)
