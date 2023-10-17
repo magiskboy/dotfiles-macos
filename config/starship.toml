@@ -22,7 +22,7 @@ style = "green"
 disabled = true
 
 [kubernetes]
-disabled = true
+disabled = false
 
 [docker_context]
 disabled = true

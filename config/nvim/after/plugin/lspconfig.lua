@@ -47,3 +47,7 @@ lsp.tsserver.setup({
 lsp.yamlls.setup{}
 
 lsp.html.setup{}
+
+lsp.clangd.setup{
+    handlers = handlers,
+}

@@ -9,6 +9,8 @@ plugins=(
     z
     zsh-autosuggestions
     zsh-syntax-highlighting
+    aws
+    kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
