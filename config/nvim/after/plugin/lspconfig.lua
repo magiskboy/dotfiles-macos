@@ -51,3 +51,4 @@ lsp.html.setup{}
 lsp.clangd.setup{
     handlers = handlers,
 }
+lsp.gopls.setup{}

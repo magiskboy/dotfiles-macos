@@ -40,6 +40,7 @@ vim.o.updatetime = 100
 
 vim.g.python3_host_prog = vim.api.nvim_eval("expand('/Users/nkthanh/.pyenv/shims/python')")
 vim.g.python_host_prog = vim.api.nvim_eval("expand('/usr/bin/python2')")
+vim.g.python3_host_prog = "/Users/offspringdigital/.pyenv/shims/python3"
 vim.g.indentLine_enabled = 1
 vim.g.indentLine_char = ''
 vim.g.indentLine_color_term = 239
