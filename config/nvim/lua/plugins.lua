@@ -20,6 +20,7 @@ return require('packer').startup(function()
     use 'nvim-treesitter/nvim-treesitter'
     use 'navarasu/onedark.nvim'
     use 'nvim-tree/nvim-tree.lua'
+    use 'towolf/vim-helm'
     use {
         'nvim-telescope/telescope.nvim',
         requires = { 

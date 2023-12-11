@@ -22,6 +22,10 @@ style = "green"
 disabled = true
 
 [kubernetes]
+disabled = true
+format = '[$symbol$cluster( \($namespace\))]($style) in '
+
+[aws]
 disabled = false
 
 [docker_context]
