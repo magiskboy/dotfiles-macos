@@ -21,6 +21,8 @@ vim.api.nvim_set_keymap('n', 'gi', ':Telescope lsp_implementations<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gt', ':Telescope lsp_type_definitions<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-i>', ':lua vim.lsp.buf.format { async = True }<cr>', opts)
 
+vim.api.nvim_set_keymap('n', '<C-t>', ':CopilotChatOpen<CR>', opts)
+
 vim.api.nvim_set_keymap('n', 'H', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-r>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 

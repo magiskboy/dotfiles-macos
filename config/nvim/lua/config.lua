@@ -51,14 +51,14 @@ autocmd FileType javascript,typescript,typescriptreact,javascriptreact,xml,yaml,
 ]])
 
 vim.diagnostic.config({
-  virtual_text = false
+  virtual_text = true
 })
 
-vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
-    callback = function(args) 
-        vim.diagnostic.open_float(nil, {focus=false})
-    end
-})
+-- vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
+--     callback = function(args) 
+--         vim.diagnostic.open_float(nil, {focus=false})
+--     end
+-- })
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)

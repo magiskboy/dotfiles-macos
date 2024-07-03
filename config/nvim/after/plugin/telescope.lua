@@ -27,7 +27,7 @@ require('telescope').setup {
     layout_config = {
       prompt_position = "top"
     },
-    sorting_strategy = "ascending"
+    sorting_strategy = "ascending",
   },
   extensions = {
     fzf = {
@@ -43,4 +43,5 @@ require('telescope').load_extension('fzf')
 
 
 vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', {})
+vim.api.nvim_set_keymap('n', '<C-g>', '<cmd>Telescope git_files<cr>', {})
 vim.api.nvim_set_keymap('n', '<C-f>', '<cmd>Telescope live_grep<cr>', {})

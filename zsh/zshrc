@@ -7,8 +7,6 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 plugins=(
     git
     z
-    zsh-autosuggestions
-    zsh-syntax-highlighting
     aws
     kubectl
 )
@@ -21,27 +19,23 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
-alias ls="exa"
-alias lt="exa -T"
-alias -s git="git clone"
-
-export GOPATH=/Users/nkthanh/Development/go
 export PATH=/Users/nkthanh/.local/go/bin:$GOPATH/bin:$HOME/.local/bin:$PATH
-export EDITOR=nvim
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#525151"
+export PATH="/opt/homebrew/bin:$PATH"
 
 bindkey -s '^d' 'clear && ls^M'
 
 eval "$(fnm env --use-on-cd)"
-eval "$(starship init zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(zellij setup --generate-auto-start zsh)"
 
+export PYTHONDONTWRITEBYTECODE=1
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-export PATH="/usr/local/opt/libpq/bin:$PATH"
+# fnm
+export PATH="/Users/nkthanh/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+
+alias pp="pnpm"
+
