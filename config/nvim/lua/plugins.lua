@@ -21,8 +21,7 @@ return require('packer').startup(function()
     use 'navarasu/onedark.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'towolf/vim-helm'
-    use 'github/copilot.vim'
-    use 'CopilotC-Nvim/CopilotChat.nvim'
+    use 'Exafunction/codeium.vim'
     use {
         'nvim-telescope/telescope.nvim',
         requires = { 

@@ -185,9 +185,9 @@
     useConfigOnly = true
     email = nguyenkhacthanh244@gmail.com
     name = Nguyen Khac Thanh
-	signingkey = /Users/nkthanh/.ssh/id_ed25519.pub
+	# signingkey = /Users/nkthanh/.ssh/id_ed25519.pub
 [commit]
-    gpgsign = true
+    gpgsign = false
 
 [include]
 

@@ -9,6 +9,8 @@ plugins=(
     z
     aws
     kubectl
+    kubectx
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -19,23 +21,30 @@ for dump in ~/.zcompdump(N.mh+24); do
 done
 compinit -C
 
-export PATH=/Users/nkthanh/.local/go/bin:$GOPATH/bin:$HOME/.local/bin:$PATH
+export EDITOR="nvim"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#878787"
+export PYENV_ROOT="$HOME/.pyenv"
+export PYTHONDONTWRITEBYTECODE=1
+export PATH=/Users/nkthanh/.local/go/bin:${GOPATH}/bin:${PATH}
+export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Users/${HOME}/.pyenv/shims:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export FNM_DIR="/Users/${HOME}/.local/share/fnm"
+export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
+export FNM_LOGLEVEL="info"
+export FNM_ARCH="arm64"
+export FNM_VERSION_FILE_STRATEGY="local"
+export FNM_MULTISHELL_PATH="/Users/${HOME}/.local/state/fnm_multishells/32817_1718595162525"
+export FNM_COREPACK_ENABLED="false"
+export FNM_RESOLVE_ENGINES="false"
+
+alias ls="eza"
+alias lt="eza --tree"
 
 bindkey -s '^d' 'clear && ls^M'
 
 eval "$(fnm env --use-on-cd)"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(starship init zsh)"
 eval "$(pyenv init -)"
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-
-export PYTHONDONTWRITEBYTECODE=1
-
-# fnm
-export PATH="/Users/nkthanh/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
-
-alias pp="pnpm"
 

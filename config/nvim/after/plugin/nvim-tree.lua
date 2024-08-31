@@ -9,6 +9,9 @@ vim.opt.termguicolors = true
 
 -- OR setup with some options
 require("nvim-tree").setup({
+  view = {
+    side = "right"
+  },
   renderer = {
     group_empty = true,
     icons = {
