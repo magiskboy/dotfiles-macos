@@ -12,7 +12,7 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {})
 vim.api.nvim_set_keymap('n', 'J', '5j', {})
 vim.api.nvim_set_keymap('n', 'K', '5k', {})
 
-vim.api.nvim_set_keymap('n', '<TAB>', ':NvimTreeToggle<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<TAB>', ':NvimTreeToggle<CR>', opts)
 
 vim.api.nvim_set_keymap('n', 'gd', ':Telescope lsp_definitions<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)

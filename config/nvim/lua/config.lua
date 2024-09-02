@@ -47,18 +47,29 @@ vim.g.indentLine_color_term = 239
 vim.o.background = 'dark'
 
 vim.cmd([[
-autocmd FileType javascript,typescript,typescriptreact,javascriptreact,xml,yaml,json,html,css,sass,scss,less,jinja,htmldjango setlocal ts=2 sts=2 sw=2
+    autocmd FileType javascript,typescript,typescriptreact,javascriptreact,xml,yaml,json,html,css,sass,scss,less,jinja,htmldjango setlocal ts=2 sts=2 sw=2
 ]])
 
 vim.diagnostic.config({
   virtual_text = true
 })
 
--- vim.api.nvim_create_autocmd("CursorHold,CursorHoldI", {
---     callback = function(args) 
---         vim.diagnostic.open_float(nil, {focus=false})
---     end
--- })
+vim.api.nvim_create_autocmd("CursorHold", {
+    callback = function(args) 
+        vim.diagnostic.open_float(nil, {focus=false})
+    end
+})
+vim.api.nvim_create_autocmd("CursorHoldI", {
+    callback = function(args) 
+        vim.diagnostic.open_float(nil, {focus=false})
+    end
+})
+
+vim.api.nvim_create_autocmd("ExitPre", {
+	group = vim.api.nvim_create_augroup("Exit", { clear = true }),
+	command = "set guicursor=a:ver90",
+	desc = "Set cursor back to beam when leaving Neovim."
+})
 
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)

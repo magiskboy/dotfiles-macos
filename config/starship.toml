@@ -29,4 +29,4 @@ format = '[$symbol$cluster( \($namespace\))]($style) in '
 disabled = false
 
 [docker_context]
-disabled = true
+disabled = false

@@ -30,15 +30,17 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Users/${HOME}/.pyenv/shims:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="/Users/apple/.local/state/fnm_multishells/30215_1725142853953/bin":$PATH
+export PATH="$HOME/.local/state/fnm_multishells/30215_1725142853953/bin":$PATH
 export FNM_LOGLEVEL="info"
-export FNM_DIR="/Users/apple/.local/share/fnm"
+export FNM_DIR="$HOME/.local/share/fnm"
 export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
 export FNM_COREPACK_ENABLED="false"
 export FNM_VERSION_FILE_STRATEGY="local"
 export FNM_ARCH="arm64"
-export FNM_MULTISHELL_PATH="/Users/apple/.local/state/fnm_multishells/30215_1725142853953"
+export FNM_MULTISHELL_PATH="$HOME/.local/state/fnm_multishells/30215_1725142853953"
 export FNM_RESOLVE_ENGINES="false"
+export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
+export BAT_THEME="OneHalfDark"
 rehash
 
 alias ls="eza"

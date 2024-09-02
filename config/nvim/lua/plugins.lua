@@ -8,7 +8,6 @@ return require('packer').startup(function()
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'alvan/vim-closetag'
     use 'tpope/vim-eunuch'
-    use 'wakatime/vim-wakatime'
     use 'tpope/vim-surround'
     use 'jiangmiao/auto-pairs'
     use 'tpope/vim-commentary'
@@ -22,6 +21,7 @@ return require('packer').startup(function()
     use 'nvim-tree/nvim-tree.lua'
     use 'towolf/vim-helm'
     use 'Exafunction/codeium.vim'
+    use 'xiyaowong/transparent.nvim'
     use {
         'nvim-telescope/telescope.nvim',
         requires = { 
