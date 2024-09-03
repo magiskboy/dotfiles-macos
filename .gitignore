@@ -1,7 +1,12 @@
 *.log
-tags
 *.zwc
 *.old
 .DS_Store
 config/nvim/plugin/packer_compiled.lua
+config/*
+
+!config/nvim
+!config/alacritty.toml
+!config/starship.toml
 !config/zellij
+!config/nvim/config/packer_compiled.lua
