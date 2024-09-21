@@ -1,18 +1,3 @@
-vim.cmd([[
-filetype plugin indent on
-set termguicolors
-set t_Co=256
-syntax on
-syntime on
-]])
-
-local onedark = require('onedark')
-onedark.setup({
-    style = "deep"
-})
-onedark.load()
-
-
 vim.o.shell = "/bin/zsh"
 vim.o.wrap = true
 vim.o.showcmd = false
@@ -28,8 +13,6 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.undofile = true
-vim.swapfile = true
-vim.backup = true
 vim.o.undodir = "/tmp/nvim"
 vim.o.wildmenu = true
 vim.o.foldmethod = "indent"
@@ -38,28 +21,30 @@ vim.o.laststatus = 2
 vim.o.path = vim.o.path .. "**"
 vim.o.updatetime = 100
 
-vim.g.python3_host_prog = vim.api.nvim_eval("expand('/Users/nkthanh/.pyenv/shims/python')")
-vim.g.python_host_prog = vim.api.nvim_eval("expand('/usr/bin/python2')")
-vim.g.python3_host_prog = "/Users/offspringdigital/.pyenv/shims/python3"
-vim.g.indentLine_enabled = 1
-vim.g.indentLine_char = ''
-vim.g.indentLine_color_term = 239
-vim.o.background = 'dark'
+vim.swapfile = true
+vim.backup = true
 
-vim.cmd([[
-    autocmd FileType javascript,typescript,typescriptreact,javascriptreact,xml,yaml,json,html,css,sass,scss,less,jinja,htmldjango setlocal ts=2 sts=2 sw=2
-]])
+local python_host = os.getenv("HOME") .. "/.pyenv/shims/python"
+vim.g.python_host_prog = python_host
+vim.g.python3_host_prog = python_host
 
 vim.diagnostic.config({
   virtual_text = true
 })
 
-vim.api.nvim_create_autocmd("CursorHold", {
-    callback = function(args) 
-        vim.diagnostic.open_float(nil, {focus=false})
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {
+        "javascript", "typescript", "typescriptreact", "javascriptreact",
+        "xml", "yaml", "json", "html", "css", "sass", "scss", "less", "jinja", "htmldjango"
+    },
+    callback = function()
+        vim.bo.shiftwidth = 2
+        vim.bo.tabstop = 2
+        vim.bo.expandtab = true
     end
 })
-vim.api.nvim_create_autocmd("CursorHoldI", {
+
+vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
     callback = function(args) 
         vim.diagnostic.open_float(nil, {focus=false})
     end
@@ -71,10 +56,3 @@ vim.api.nvim_create_autocmd("ExitPre", {
 	desc = "Set cursor back to beam when leaving Neovim."
 })
 
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-  opts = opts or {}
-  opts.border = opts.border or 'single'
-  opts.max_width = opts.max_width or 80
-  return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end

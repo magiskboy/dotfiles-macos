@@ -5,3 +5,4 @@ require('bufferline').setup {
         show_close_icons = false,
     }
 }
+

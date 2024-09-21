@@ -2,32 +2,37 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use 'lewis6991/impatient.nvim'
-    use 'ap/vim-css-color'
-    use 'neovim/nvim-lspconfig'
-    use 'jose-elias-alvarez/null-ls.nvim'
-    use 'alvan/vim-closetag'
-    use 'tpope/vim-eunuch'
-    use 'tpope/vim-surround'
-    use 'jiangmiao/auto-pairs'
-    use 'tpope/vim-commentary'
-    use 'nvim-lua/plenary.nvim'
-    use 'kyazdani42/nvim-web-devicons'
-    use 'kevinhwang91/rnvimr'
-    use 'lewis6991/gitsigns.nvim'
-    use 'ray-x/lsp_signature.nvim'
+    
+    -- syntax
     use 'nvim-treesitter/nvim-treesitter'
-    use 'navarasu/onedark.nvim'
-    use 'nvim-tree/nvim-tree.lua'
+    use 'ap/vim-css-color'
     use 'towolf/vim-helm'
-    use 'Exafunction/codeium.vim'
-    use 'xiyaowong/transparent.nvim'
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = { 
-            {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-        },
-    }
+    use 'hashivim/vim-terraform'
+
+    -- theme
+    use 'navarasu/onedark.nvim'
+
+    -- lsp
+    use 'neovim/nvim-lspconfig'
+    use 'ray-x/lsp_signature.nvim'
+
+    -- AI
+    -- use 'Exafunction/codeium.vim'
+    use 'github/copilot.vim'
+
+    -- code tools
+    use 'alvan/vim-closetag'
+    use 'tpope/vim-surround'
+    use 'windwp/nvim-autopairs'
+    use 'lewis6991/gitsigns.nvim'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-eunuch'
+    use 'junegunn/fzf'
+    use 'junegunn/fzf.vim'
+
+    -- UI enhancement
+    use 'kyazdani42/nvim-web-devicons'
+    use 'nvim-tree/nvim-tree.lua'
     use {
         'hrsh7th/nvim-cmp',
         requires = {
@@ -45,4 +50,9 @@ return require('packer').startup(function()
             {'arkav/lualine-lsp-progress'}
         }
     }
+
+    -- others
+    use 'nvim-lua/plenary.nvim'
+    use 'xiyaowong/transparent.nvim'
 end)
+

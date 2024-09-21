@@ -29,3 +29,13 @@ Dotfiles for MacOS
 - az
 - gcloud
 - aws
+
+## NPM
+- vscode-langservers-extracted
+- typescript
+- eslint
+
+## Python
+- pynvim
+- ruff
+

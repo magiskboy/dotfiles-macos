@@ -11,6 +11,7 @@ plugins=(
     kubectl
     kubectx
     zsh-autosuggestions
+    terraform
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -25,26 +26,21 @@ export EDITOR="nvim"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#878787"
 export PYENV_ROOT="$HOME/.pyenv"
 export PYTHONDONTWRITEBYTECODE=1
-export PATH=/Users/nkthanh/.local/go/bin:${GOPATH}/bin:${PATH}
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/Users/${HOME}/.pyenv/shims:$PATH"
+export PATH="${HOME}/.pyenv/shims:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$HOME/.local/state/fnm_multishells/30215_1725142853953/bin":$PATH
-export FNM_LOGLEVEL="info"
-export FNM_DIR="$HOME/.local/share/fnm"
-export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
-export FNM_COREPACK_ENABLED="false"
-export FNM_VERSION_FILE_STRATEGY="local"
-export FNM_ARCH="arm64"
-export FNM_MULTISHELL_PATH="$HOME/.local/state/fnm_multishells/30215_1725142853953"
-export FNM_RESOLVE_ENGINES="false"
-export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --line-range :500 {}'"
-export BAT_THEME="OneHalfDark"
+export PATH=$HOME/.gem/bin:$PATH
+export PATH=$HOME/flutter/bin:$PATH
+export FNM_COREPACK_ENABLED="true"
+export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always --theme OneHalfLight --line-range :500 {}'"
+export BAT_THEME="OneHalfLight"
 rehash
 
 alias ls="eza"
 alias lt="eza --tree"
+alias rand="openssl rand -base64"
+alias myip="echo $(curl -4 -s ifconfig.me)"
 
 bindkey -s '^d' 'clear && ls^M'
 

@@ -18,7 +18,7 @@ local handlers =  {
   ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
 }
 
-local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+local signs = { Error = "‼️ ", Warning = "⚠️ ", Hint = "⁉️ ", Information = "." }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
@@ -39,9 +39,17 @@ lsp.pylsp.setup{
     } 
 }
 
-lsp.tsserver.setup({
+lsp.ts_ls.setup({
     root_dir = util.root_pattern("package.json"),
     handlers = handlers
+})
+lsp.eslint.setup({
+  on_attach = function(client, bufnr)
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    })
+  end,
 })
 
 lsp.yamlls.setup{}
@@ -51,4 +59,6 @@ lsp.html.setup{}
 lsp.clangd.setup{
     handlers = handlers,
 }
+
 lsp.gopls.setup{}
+
