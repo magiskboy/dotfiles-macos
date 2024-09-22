@@ -26,7 +26,7 @@ end
 
 -- setup language server
 
-lsp.pylsp.setup{
+lsp.pylsp.setup({
     handlers = handlers,
     settings = {
         pylsp = {
@@ -37,12 +37,13 @@ lsp.pylsp.setup{
             }
         }
     } 
-}
+})
 
 lsp.ts_ls.setup({
     root_dir = util.root_pattern("package.json"),
     handlers = handlers
 })
+
 lsp.eslint.setup({
   on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {

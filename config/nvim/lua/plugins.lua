@@ -27,8 +27,21 @@ return require('packer').startup(function()
     use 'lewis6991/gitsigns.nvim'
     use 'tpope/vim-commentary'
     use 'tpope/vim-eunuch'
-    use 'junegunn/fzf'
-    use 'junegunn/fzf.vim'
+    use 'ibhagwan/fzf-lua'
+    use 'sindrets/diffview.nvim'
+    use {
+      "nvim-neotest/neotest",
+      requires = {
+        "nvim-neotest/nvim-nio",
+        "nvim-lua/plenary.nvim",
+        "antoinemadec/FixCursorHold.nvim",
+        "nvim-treesitter/nvim-treesitter",
+
+        "marilari88/neotest-vitest",
+
+        "mfussenegger/nvim-dap",
+      },
+    }
 
     -- UI enhancement
     use 'kyazdani42/nvim-web-devicons'
