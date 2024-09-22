@@ -74,6 +74,19 @@ vim.api.nvim_create_autocmd("ExitPre", {
 	desc = "Set cursor back to beam when leaving Neovim."
 })
 
+function _G.run(cmd)
+  vim.fn.jobstart(cmd, {
+    on_exit = function(_, exit_code)
+      if exit_code == 0 then
+        vim.notify("Command completed: " .. cmd, "info", { timeout = 3000 })
+      else
+        vim.notify("Command failed: " .. cmd, "error", { timeout = 5000 })
+      end
+    end,
+  })
+end
+
+
 require("lazy").setup({
   spec = {
     -- import your plugins
@@ -85,3 +98,4 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = false },
 })
+

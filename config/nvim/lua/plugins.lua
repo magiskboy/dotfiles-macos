@@ -29,23 +29,17 @@ return {
     'lewis6991/gitsigns.nvim',
     'tpope/vim-commentary',
     'tpope/vim-eunuch',
-    'ibhagwan/fzf-lua',
-    'sindrets/diffview.nvim',
-
-    -- Neotest with dependencies
     {
-        'nvim-neotest/neotest',
-        dependencies = {
-            'nvim-neotest/nvim-nio',
-            'nvim-lua/plenary.nvim',
-            'antoinemadec/FixCursorHold.nvim',
-            'nvim-treesitter/nvim-treesitter',
-            'marilari88/neotest-vitest',
-            'mfussenegger/nvim-dap',
-        }
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 
+            {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+        },
     },
+    'sindrets/diffview.nvim',
+    'akinsho/toggleterm.nvim',
 
     -- UI enhancements
+    'rcarriga/nvim-notify',
     'kyazdani42/nvim-web-devicons',
     {
         'nvim-tree/nvim-tree.lua',

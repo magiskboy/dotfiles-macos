@@ -14,12 +14,14 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {})
 vim.api.nvim_set_keymap('n', 'J', '5j', {})
 vim.api.nvim_set_keymap('n', 'K', '5k', {})
 
-vim.api.nvim_set_keymap('n', 'gd', ':FzfLua lsp_definitions<CR>', opts)
-vim.api.nvim_set_keymap('n', 'gr', ':FzfLua lsp_references<CR>', opts)
-vim.api.nvim_set_keymap('n', 'gi', ':FzfLua lsp_implementations<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>t', ':ToggleTerm<CR>', opts)
 
-vim.api.nvim_set_keymap('n', '<C-p>', ':FzfLua files<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-f>', ':FzfLua live_grep<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gd', ':Telescope lsp_definitions<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gr', ':Telescope lsp_references<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gi', ':Telescope lsp_implementations<CR>', opts)
+
+vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files<CR>', opts)
+vim.api.nvim_set_keymap('n', '<C-f>', ':Telescope live_grep<CR>', opts)
 
 vim.api.nvim_set_keymap('n', 'H', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-r>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
@@ -44,3 +46,4 @@ vim.api.nvim_set_keymap('n', '<leader>6', '<cmd>BufferLineGoToBuffer 6<cr>', opt
 vim.api.nvim_set_keymap('n', '<leader>7', '<cmd>BufferLineGoToBuffer 7<cr>', opts)
 vim.api.nvim_set_keymap('n', '<leader>8', '<cmd>BufferLineGoToBuffer 8<cr>', opts)
 vim.api.nvim_set_keymap('n', '<leader>9', '<cmd>BufferLineGoToBuffer 9<cr>', opts)
+
