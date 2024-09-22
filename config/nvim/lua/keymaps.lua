@@ -14,12 +14,12 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {})
 vim.api.nvim_set_keymap('n', 'J', '5j', {})
 vim.api.nvim_set_keymap('n', 'K', '5k', {})
 
-vim.api.nvim_set_keymap('n', 'gd', ':FzfLua lsp_definition<CR>', opts)
+vim.api.nvim_set_keymap('n', 'gd', ':FzfLua lsp_definitions<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gr', ':FzfLua lsp_references<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gi', ':FzfLua lsp_implementations<CR>', opts)
 
 vim.api.nvim_set_keymap('n', '<C-p>', ':FzfLua files<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-f>', ':FzfLua grep<CR>', opts)
+vim.api.nvim_set_keymap('n', '<C-f>', ':FzfLua live_grep<CR>', opts)
 
 vim.api.nvim_set_keymap('n', 'H', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-r>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)

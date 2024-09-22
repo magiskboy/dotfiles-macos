@@ -1,71 +1,75 @@
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function()
-    use 'wbthomason/packer.nvim'
+return {
+    -- Lazy.nvim configuration itself
+    'wbthomason/packer.nvim', -- Ensure lazy.nvim is available
     
-    -- syntax
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'ap/vim-css-color'
-    use 'towolf/vim-helm'
-    use 'hashivim/vim-terraform'
+    -- Syntax plugins
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate',
+    },
+    'ap/vim-css-color',
+    'towolf/vim-helm',
+    'hashivim/vim-terraform',
 
-    -- theme
-    use 'navarasu/onedark.nvim'
+    -- Theme
+    'navarasu/onedark.nvim',
 
-    -- lsp
-    use 'neovim/nvim-lspconfig'
-    use 'ray-x/lsp_signature.nvim'
+    -- LSP and signature
+    'neovim/nvim-lspconfig',
+    'ray-x/lsp_signature.nvim',
 
     -- AI
-    -- use 'Exafunction/codeium.vim'
-    use 'github/copilot.vim'
+    -- 'Exafunction/codeium.vim',
+    'github/copilot.vim',
 
-    -- code tools
-    use 'alvan/vim-closetag'
-    use 'tpope/vim-surround'
-    use 'windwp/nvim-autopairs'
-    use 'lewis6991/gitsigns.nvim'
-    use 'tpope/vim-commentary'
-    use 'tpope/vim-eunuch'
-    use 'ibhagwan/fzf-lua'
-    use 'sindrets/diffview.nvim'
-    use {
-      "nvim-neotest/neotest",
-      requires = {
-        "nvim-neotest/nvim-nio",
-        "nvim-lua/plenary.nvim",
-        "antoinemadec/FixCursorHold.nvim",
-        "nvim-treesitter/nvim-treesitter",
+    -- Code tools
+    'alvan/vim-closetag',
+    'tpope/vim-surround',
+    'windwp/nvim-autopairs',
+    'lewis6991/gitsigns.nvim',
+    'tpope/vim-commentary',
+    'tpope/vim-eunuch',
+    'ibhagwan/fzf-lua',
+    'sindrets/diffview.nvim',
 
-        "marilari88/neotest-vitest",
+    -- Neotest with dependencies
+    {
+        'nvim-neotest/neotest',
+        dependencies = {
+            'nvim-neotest/nvim-nio',
+            'nvim-lua/plenary.nvim',
+            'antoinemadec/FixCursorHold.nvim',
+            'nvim-treesitter/nvim-treesitter',
+            'marilari88/neotest-vitest',
+            'mfussenegger/nvim-dap',
+        }
+    },
 
-        "mfussenegger/nvim-dap",
-      },
-    }
-
-    -- UI enhancement
-    use 'kyazdani42/nvim-web-devicons'
-    use 'nvim-tree/nvim-tree.lua'
-    use {
+    -- UI enhancements
+    'kyazdani42/nvim-web-devicons',
+    {
+        'nvim-tree/nvim-tree.lua',
+        cmd = 'NvimTreeToggle',
+    },
+    {
         'hrsh7th/nvim-cmp',
-        requires = {
+        dependencies = {
             'hrsh7th/vim-vsnip',
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
-            'hrsh7th/cmp-cmdline'
+            'hrsh7th/cmp-cmdline',
         }
-    }
-    use {
+    },
+    {
         'nvim-lualine/lualine.nvim',
-        requires = { 
-            {'akinsho/bufferline.nvim', tags = '2.*'},
-            {'arkav/lualine-lsp-progress'}
+        dependencies = {
+            'akinsho/bufferline.nvim',
+            'arkav/lualine-lsp-progress',
         }
-    }
+    },
 
-    -- others
-    use 'nvim-lua/plenary.nvim'
-    use 'xiyaowong/transparent.nvim'
-end)
+    -- Other utilities
+    'xiyaowong/transparent.nvim',
+}
 

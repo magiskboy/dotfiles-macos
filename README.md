@@ -30,12 +30,12 @@ Dotfiles for MacOS
 - gcloud
 - aws
 
-## NPM
-- vscode-langservers-extracted
-- typescript
-- eslint
 
-## Python
-- pynvim
-- ruff
+## For neovim
+
+```bash
+$ npm i -g vscode-langservers-extracted typescript eslint typescript-language-server yaml-language-server cssmodules-language-server neovim
+$ pip install pynvim ruff python-language-server python-lsp-server ruff-lsp
+$ brew install helm-ls
+```
 

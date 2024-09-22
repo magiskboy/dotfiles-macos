@@ -18,11 +18,11 @@ local handlers =  {
   ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border }),
 }
 
-local signs = { Error = "‼️ ", Warning = "⚠️ ", Hint = "⁉️ ", Information = "." }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
+-- local signs = { Error = "‼️ ", Warning = "⚠️ ", Hint = "⁉️ ", Information = "." }
+-- for type, icon in pairs(signs) do
+--   local hl = "DiagnosticSign" .. type
+--   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+-- end
 
 -- setup language server
 
@@ -62,4 +62,14 @@ lsp.clangd.setup{
 }
 
 lsp.gopls.setup{}
+
+lsp.helm_ls.setup{
+  settings = {
+    ['helm-ls'] = {
+      yamlls = {
+        path = "yaml-language-server",
+      }
+    }
+  }
+}
 
