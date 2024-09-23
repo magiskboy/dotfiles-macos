@@ -1,4 +1,6 @@
-require'lsp_signature'.setup({
+local lspsignature = require'lsp_signature'
+
+lspsignature.setup({
   bind = true,
   doc_lines = 10,
   floating_window_above_cur_line = true, 
@@ -15,3 +17,4 @@ require'lsp_signature'.setup({
   },
   always_trigger = true, 
 })
+

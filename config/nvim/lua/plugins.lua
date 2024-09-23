@@ -65,5 +65,6 @@ return {
 
     -- Other utilities
     'xiyaowong/transparent.nvim',
+    'nvim-lua/plenary.nvim',
 }
 

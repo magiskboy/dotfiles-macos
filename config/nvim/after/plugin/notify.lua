@@ -1,5 +1,9 @@
 local notify = require('notify')
 
+notify.setup({
+    background_colour = "#1E1E1E",
+})
+
 vim.notify = notify
 
 vim.lsp.handlers["window/showMessage"] = function(_, result, ctx)
@@ -16,19 +20,19 @@ vim.lsp.handlers["window/showMessage"] = function(_, result, ctx)
   })
 end
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, result, ctx, _)
-  local client = vim.lsp.get_client_by_id(ctx.client_id)
-  local diagnostics = result.diagnostics
-  for _, diagnostic in ipairs(diagnostics) do
-    local level = ({
-      [vim.diagnostic.severity.ERROR] = "ERROR",
-      [vim.diagnostic.severity.WARN] = "WARN",
-      [vim.diagnostic.severity.INFO] = "INFO",
-      [vim.diagnostic.severity.HINT] = "DEBUG",
-    })[diagnostic.severity]
-    notify(diagnostic.message, level, {
-      title = client.name .. " Diagnostic",
-      timeout = 3000, -- Adjust timeout
-    })
-  end
-end
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, result, ctx, _)
+--   local client = vim.lsp.get_client_by_id(ctx.client_id)
+--   local diagnostics = result.diagnostics
+--   for _, diagnostic in ipairs(diagnostics) do
+--     local level = ({
+--       [vim.diagnostic.severity.ERROR] = "ERROR",
+--       [vim.diagnostic.severity.WARN] = "WARN",
+--       [vim.diagnostic.severity.INFO] = "INFO",
+--       [vim.diagnostic.severity.HINT] = "DEBUG",
+--     })[diagnostic.severity]
+--     notify(diagnostic.message, level, {
+--       title = client.name .. " Diagnostic",
+--       timeout = 3000, -- Adjust timeout
+--     })
+--   end
+-- end

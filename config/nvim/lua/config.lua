@@ -15,6 +15,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.cmd("syntax on")
+vim.opt.termguicolors = true
 vim.g.mapleader = ","
 vim.o.shell = "/bin/zsh"
 vim.o.wrap = true
