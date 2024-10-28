@@ -19,8 +19,7 @@ return {
     'ray-x/lsp_signature.nvim',
 
     -- AI
-    -- 'Exafunction/codeium.vim',
-    'github/copilot.vim',
+    'Exafunction/codeium.vim',
 
     -- Code tools
     'alvan/vim-closetag',

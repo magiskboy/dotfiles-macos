@@ -34,7 +34,7 @@ Dotfiles for MacOS
 ## For neovim
 
 ```bash
-$ npm i -g vscode-langservers-extracted typescript eslint typescript-language-server yaml-language-server cssmodules-language-server neovim
+$ npm i -g vscode-langservers-extracted typescript eslint typescript-language-server yaml-language-server cssmodules-language-server neovim tree-sitter-cli
 $ pip install pynvim ruff python-language-server python-lsp-server ruff-lsp
 $ brew install helm-ls
 ```
