@@ -15,6 +15,8 @@ return {
     'navarasu/onedark.nvim',
 
     -- LSP and signature
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
     'ray-x/lsp_signature.nvim',
 
