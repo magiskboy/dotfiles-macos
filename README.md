@@ -17,7 +17,7 @@ Dotfiles for MacOS
 - fzf
 - http
 - ripgrep
-- eza
+- lsd
 
 ## Extras
 - helm

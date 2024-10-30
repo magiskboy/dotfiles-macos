@@ -36,13 +36,12 @@ blur = false
 x = 10
 y = 10
 
+[shell]
+program = "/bin/zsh"
+
 [keyboard]
 bindings = [
-    # { key = "v", mods = "Control", action = "ToggleViMode" },
-    # { key = "f", mods = "Control", action = "ToggleFullscreen" },
     { key = "n", mods = "Command", action = "CreateNewTab" },
-    # { key = "Tab", mods = "Control", action = "SelectNextTab" },
-    # { key = "Tab", mods = "Shift", action = "SelectPreviousTab" }
 ]
 
 [colors.bright]

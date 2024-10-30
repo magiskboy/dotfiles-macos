@@ -11,5 +11,5 @@ default_layout "compact"
 
 default_mode "locked"
 
-theme "Catppuccin Mocha"
+default_shell "zsh -l"
 

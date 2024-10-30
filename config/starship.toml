@@ -1,16 +1,17 @@
 add_newline = false
+right_format = "$kubernetes $python $nodejs"
 
 [python]
 pyenv_version_name = true
 detect_files = ["pyproject.toml", "requirements.txt", "setup.py"]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[nodejs]
+format = '[$symbol($version )]($style)'
 
 [character]
 success_symbol = "[➜](bold green)"
 error_symbol = "[➜](bold red)"
-
-[cmd_duration]
-min_time = 100
-show_milliseconds = true
 
 [directory]
 truncate_to_repo = false
@@ -18,15 +19,15 @@ truncation_length = 6
 truncation_symbol = "…/"
 style = "green"
 
-[gcloud]
-disabled = true
-
 [kubernetes]
 disabled = false
-format = '[$symbol$cluster( \($namespace\))]($style) in '
+format = '[$symbol$cluster( \($namespace\))]($style)'
 
 [aws]
 disabled = false
+
+[gcloud]
+disabled = true
 
 [docker_context]
 disabled = true
