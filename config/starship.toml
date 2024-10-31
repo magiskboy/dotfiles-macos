@@ -1,6 +1,9 @@
 add_newline = false
 right_format = "$kubernetes $python $nodejs"
 
+[cmd_duration]
+disabled = true
+
 [python]
 pyenv_version_name = true
 detect_files = ["pyproject.toml", "requirements.txt", "setup.py"]
