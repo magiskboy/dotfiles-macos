@@ -13,24 +13,13 @@ local handlers =  {
 }
 
 -- setup language server
-lsp.pylsp.setup({
-    handlers = handlers,
-    settings = {
-        pylsp = {
-            plugins = {
-                ruff = {
-                    enabled = true,
-                }
-            }
-        }
-    }
-})
+lsp.ruff_lsp.setup({})
+lsp.pyright.setup({})
 
 lsp.ts_ls.setup({
     root_dir = util.root_pattern("package.json"),
     handlers = handlers
 })
-
 lsp.eslint.setup({
   on_attach = function(_, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -39,8 +28,6 @@ lsp.eslint.setup({
     })
   end,
 })
-
-lsp.sqls.setup{}
 
 lsp.yamlls.setup{}
 
