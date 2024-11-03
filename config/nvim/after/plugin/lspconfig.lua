@@ -7,10 +7,10 @@ local util = require'lspconfig'.util
 local lsp = require('lspconfig');
 
 -- LSP settings (for overriding per client)
-local handlers =  {
-  ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, { border = 'single' }),
-  ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'single' }),
-}
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'single' });
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'single' });
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false, border = 'single' });
 
 -- setup language server
 lsp.ruff_lsp.setup({})
@@ -18,7 +18,6 @@ lsp.pyright.setup({})
 
 lsp.ts_ls.setup({
     root_dir = util.root_pattern("package.json"),
-    handlers = handlers
 })
 lsp.eslint.setup({
   on_attach = function(_, bufnr)
@@ -33,9 +32,7 @@ lsp.yamlls.setup{}
 
 lsp.html.setup{}
 
-lsp.clangd.setup{
-    handlers = handlers,
-}
+lsp.clangd.setup{}
 
 lsp.gopls.setup{}
 

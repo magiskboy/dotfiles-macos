@@ -6,19 +6,19 @@ notify.setup({
 
 vim.notify = notify
 
-vim.lsp.handlers["window/showMessage"] = function(_, result, ctx)
-  local client = vim.lsp.get_client_by_id(ctx.client_id)
-  local level = ({
-    "ERROR",
-    "WARN",
-    "INFO",
-    "DEBUG",
-  })[result.type]
-  notify(result.message, level, {
-    title = client and client.name or "LSP",
-    timeout = 3000, -- You can adjust the timeout for LSP notifications here
-  })
-end
+-- vim.lsp.handlers["window/showMessage"] = function(_, result, ctx)
+--   local client = vim.lsp.get_client_by_id(ctx.client_id)
+--   local level = ({
+--     "ERROR",
+--     "WARN",
+--     "INFO",
+--     "DEBUG",
+--   })[result.type]
+--   notify(result.message, level, {
+--     title = client and client.name or "LSP",
+--     timeout = 3000, -- You can adjust the timeout for LSP notifications here
+--   })
+-- end
 
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = function(_, result, ctx, _)
 --   local client = vim.lsp.get_client_by_id(ctx.client_id)
