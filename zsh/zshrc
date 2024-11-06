@@ -1,10 +1,9 @@
+#!/bin/zsh
+
 source ${HOME}/.zsh-defer/zsh-defer.plugin.zsh
 
-alias ls="lsd --icon never"
-alias lt="ls --tree"
-alias rand="openssl rand -base64"
-alias myip="echo $(curl -4 -s ifconfig.me)"
 alias vim="nvim"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 zsh-defer eval "$(fnm env --use-on-cd)"
 
@@ -15,7 +14,6 @@ plugins=(
 defer_plugins=(
     git
     cp
-    dotenv
     fnm
     aws
     helm
@@ -26,9 +24,13 @@ defer_plugins=(
     zoxide
     pyenv
     docker
+    eza
     zsh-autosuggestions
     zsh-syntax-highlighting
+    fzf-tab
 )
+
+source $ZSH/oh-my-zsh.sh
 
 function _load_defer_plugins() {
     for plugin in $defer_plugins; do
@@ -41,6 +43,4 @@ function _load_defer_plugins() {
 }
 
 _load_defer_plugins
-
-source $ZSH/oh-my-zsh.sh
 

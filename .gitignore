@@ -10,3 +10,5 @@ config/*
 !config/starship.toml
 !config/zellij
 !config/nvim/config/packer_compiled.lua
+!config/gitconfig
+

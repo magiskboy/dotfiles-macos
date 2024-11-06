@@ -1,7 +1,4 @@
 return {
-    -- Lazy.nvim configuration itself
-    'wbthomason/packer.nvim', -- Ensure lazy.nvim is available
-    
     -- Syntax plugins
     {
         'nvim-treesitter/nvim-treesitter',
@@ -32,6 +29,7 @@ return {
     'tpope/vim-eunuch',
     {
         'nvim-telescope/telescope.nvim',
+        version = '^0.1.8',
         dependencies = {
             {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
         },

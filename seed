@@ -4,7 +4,7 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew install fd riggrep fzf bat lsd jq yq htop autoenv
+brew install fd riggrep fzf bat jq yq htop autoenv eza
 
 brew install neovim
 
@@ -15,4 +15,6 @@ brew install zsh starship zellij zoxide
 brew install derailed/k9s/k9s kubectl
 
 brew install git-delta
+
+git clone https://github.com/Aloxaf/fzf-tab ${HOME}.oh-my-zsh/custom/plugins/.fzf-tab
 
