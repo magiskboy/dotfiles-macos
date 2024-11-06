@@ -32,7 +32,7 @@ return {
     'tpope/vim-eunuch',
     {
         'nvim-telescope/telescope.nvim',
-        dependencies = { 
+        dependencies = {
             {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
         },
     },
