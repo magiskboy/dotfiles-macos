@@ -1,0 +1,27 @@
+#!/usr/bin/env zsh
+
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#878787"
+
+export DOTFILES="$HOME/.dotfiles"
+
+export PATH="$PATH:/opt/homebrew/bin"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="${PYENV_ROOT}/shims:$PATH"
+export PYTHONDONTWRITEBYTECODE=1
+
+export PATH="$HOME/.gem/bin:$PATH"
+
+export PATH="$DOTFILES/bin:$PATH"
+
+export GOPATH="$HOME/code/go"
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/.local/go/bin:$PATH"
+
+export EDITOR="nvim"
+
+export BAT_THEME="OneHalfLight"
+
+export PATH="${HOME}/.local/bin:/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+

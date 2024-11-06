@@ -1,5 +1,6 @@
 add_newline = false
 right_format = "$kubernetes $python $nodejs"
+continuation_prompt = '... '
 
 [cmd_duration]
 disabled = true
