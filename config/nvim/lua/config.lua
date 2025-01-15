@@ -44,7 +44,7 @@ vim.o.updatetime = 100
 vim.swapfile = true
 vim.backup = true
 
-local python_host = os.getenv("HOME") .. "/.pyenv/shims/python"
+local python_host = "/usr/local/bin/python"
 vim.g.python_host_prog = python_host
 vim.g.python3_host_prog = python_host
 

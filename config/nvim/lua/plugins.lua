@@ -15,12 +15,24 @@ return {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
-    'ray-x/lsp_signature.nvim',
+    {
+        'ray-x/lsp_signature.nvim',
+        version = 'v0.3.1'
+    },
 
     -- AI
-    'Exafunction/codeium.vim',
+    'Exafunction/codeium.nvim',
 
     -- Code tools
+    {
+        'fatih/vim-go',
+        ft = 'go',
+        config = function()
+            vim.g.go_doc_keywordprg_enabled = 0
+            vim.g.go_def_mapping_enabled = 0
+            vim.g.go_code_completed_enabled = 0
+        end
+    },
     'alvan/vim-closetag',
     'tpope/vim-surround',
     'windwp/nvim-autopairs',

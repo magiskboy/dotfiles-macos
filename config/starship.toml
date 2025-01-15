@@ -24,11 +24,11 @@ truncation_symbol = "…/"
 style = "green"
 
 [kubernetes]
-disabled = false
+disabled = true
 format = '[$symbol$cluster( \($namespace\))]($style)'
 
 [aws]
-disabled = false
+disabled = true
 
 [gcloud]
 disabled = true

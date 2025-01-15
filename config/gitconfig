@@ -1,4 +1,4 @@
-# vim: filetype=gitconfig
+# vim: ft=gitconfig
 
 [color "branch"]
     current = green bold
@@ -36,28 +36,25 @@
 
 [diff]
     colorMoved = zebra
+    tool = vimdiff
 
 [diff "bin"]
     textconv = hexdump -v -C
 
 [push]
-
     # Make `git push` no automatically push relevant
     # annotated tags when pushing branches out.
-
     followTags = false
 
 [user]
     useConfigOnly = true
     email = nguyenkhacthanh244@gmail.com
     name = Nguyen Khac Thanh
-	# signingkey = /Users/nkthanh/.ssh/id_ed25519.pub
+	signingkey = /Users/nkthanh/.ssh/id_ed25519.pub
 
 [commit]
-    gpgsign = false
-
-[include]
-    path = ~/.gitconfig.local
+    gpgsign = true
+    template = /Users/nkthanh/.dotfiles/config/gitmessage.txt
 
 [merge]
   tool = vimdiff
@@ -71,13 +68,13 @@
 [difftool]
     prompt = false
 
-[diff]
-    tool = vimdiff
-
 [pull]
 	rebase = false
 	ff = only
 
 [gpg]
 	format = ssh
+
+[include]
+    path = ~/.gitconfig.local
 

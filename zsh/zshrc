@@ -22,7 +22,6 @@ defer_plugins=(
     terraform
     yarn
     zoxide
-    pyenv
     docker
     eza
     zsh-autosuggestions
@@ -43,4 +42,7 @@ function _load_defer_plugins() {
 }
 
 _load_defer_plugins
+
+export TERM=xterm-256color
+
 
