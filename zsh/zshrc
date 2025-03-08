@@ -4,6 +4,7 @@ source ${HOME}/.zsh-defer/zsh-defer.plugin.zsh
 
 alias vim="nvim"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias lt="ls -T"
 
 zsh-defer eval "$(fnm env --use-on-cd)"
 
@@ -27,6 +28,7 @@ defer_plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     fzf-tab
+    terraform
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -45,4 +47,8 @@ _load_defer_plugins
 
 export TERM=xterm-256color
 
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/nkthanh/.cache/lm-studio/bin"
 

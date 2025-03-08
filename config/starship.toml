@@ -1,5 +1,5 @@
 add_newline = false
-right_format = "$kubernetes $python $nodejs"
+right_format = "$python $nodejs"
 continuation_prompt = '... '
 
 [cmd_duration]
@@ -24,8 +24,8 @@ truncation_symbol = "…/"
 style = "green"
 
 [kubernetes]
-disabled = true
-format = '[$symbol$cluster( \($namespace\))]($style)'
+disabled = false
+format = '[$symbol$context( \($namespace\))]($style) '
 
 [aws]
 disabled = true

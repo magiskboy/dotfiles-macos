@@ -46,6 +46,8 @@ lsp.helm_ls.setup{
   }
 }
 
+lsp.terraformls.setup{}
+
 lsp.lua_ls.setup {
   on_init = function(client)
     if client.workspace_folders then

@@ -37,7 +37,7 @@ vim.o.undodir = "/tmp/nvim"
 vim.o.wildmenu = true
 vim.o.foldmethod = "indent"
 vim.o.foldlevel = 99
-vim.o.laststatus = 2
+vim.o.laststatus = 3
 vim.o.path = vim.o.path .. "**"
 vim.o.updatetime = 100
 
@@ -65,7 +65,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd({"CursorHold", "CursorHoldI"}, {
-    callback = function(args) 
+    callback = function()
         vim.diagnostic.open_float(nil, {focus=false})
     end
 })
@@ -78,7 +78,7 @@ vim.api.nvim_create_autocmd("ExitPre", {
 
 function _G.run(cmd)
   vim.fn.jobstart(cmd, {
-    on_exit = function(_, exit_code)
+    on_exit = function(args, exit_code)
       if exit_code == 0 then
         vim.notify("Command completed: " .. cmd, "info", { timeout = 3000 })
       else
