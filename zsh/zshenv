@@ -24,7 +24,4 @@ export EDITOR="nvim"
 export BAT_THEME="OneHalfLight"
 
 export PATH="${HOME}/.local/bin:/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
-
-export GIT_CONFIG="${HOME}/config/gitconfig"
-
-export GEMINI_API_KEY="AIzaSyCiVN3KsOajcLbVeb0gVpCWlZ3vg1AMOAk"
+. "$HOME/.cargo/env"

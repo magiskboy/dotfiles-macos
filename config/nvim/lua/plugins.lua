@@ -11,35 +11,21 @@ return {
     -- Theme
     'navarasu/onedark.nvim',
 
+    'luckasRanarison/tailwind-tools.nvim',
+
     -- LSP and signature
     'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-    'neovim/nvim-lspconfig',
+    {
+        'williamboman/mason-lspconfig.nvim',
+        version = 'v1.32.0',
+    },
+    {
+        'neovim/nvim-lspconfig',
+        version = 'v2.3.0'
+    },
     {
         'ray-x/lsp_signature.nvim',
         version = 'v0.3.1'
-    },
-
-    {
-        "Exafunction/codeium.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "hrsh7th/nvim-cmp",
-        },
-    },
-
-    {
-        "yetone/avante.nvim",
-        event = "VeryLazy",
-        version = false,
-        build = "make",
-
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "stevearc/dressing.nvim",
-            "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-        }
     },
 
     -- Code tools
@@ -77,6 +63,7 @@ return {
     },
     {
         'hrsh7th/nvim-cmp',
+        version = 'v0.0.2',
         dependencies = {
             'hrsh7th/vim-vsnip',
             'hrsh7th/cmp-nvim-lsp',

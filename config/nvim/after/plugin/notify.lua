@@ -4,7 +4,7 @@ notify.setup({
     background_colour = "#1E1E1E",
 })
 
-vim.notify = notify
+-- vim.notify = notify
 
 -- vim.lsp.handlers["window/showMessage"] = function(_, result, ctx)
 --   local client = vim.lsp.get_client_by_id(ctx.client_id)

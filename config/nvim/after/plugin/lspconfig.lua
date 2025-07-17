@@ -14,7 +14,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 
 -- setup language server
 lsp.ruff.setup({})
-lsp.pyright.setup({})
+lsp.pyright.setup({
+    filetypes = { 'python', 'cython' }
+})
 
 lsp.ts_ls.setup({
     root_dir = util.root_pattern("package.json"),
@@ -74,3 +76,13 @@ lsp.lua_ls.setup {
   }
 }
 
+
+lsp.rust_analyzer.setup {
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = true;
+      }
+    }
+  }
+}
